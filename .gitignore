@@ -1,3 +1,6 @@
+# Build folder
+server/build/
+
 # Logs
 logs
 *.log
