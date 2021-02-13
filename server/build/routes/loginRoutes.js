@@ -12,16 +12,6 @@ function requireAuth(req, res, next) {
 }
 var router = express_1.Router();
 exports.router = router;
-router.post('/login', function (req, res) {
-    var _a = req.body, email = _a.email, password = _a.password;
-    if (email && password && email == 'hi@hi.com' && password == 'hi') {
-        req.session = { loggedIn: true };
-        res.redirect('/');
-    }
-    else {
-        res.send("Invalid email or password");
-    }
-});
 router.get('/logout', function (req, res) {
     req.session = undefined;
     res.redirect('/');
