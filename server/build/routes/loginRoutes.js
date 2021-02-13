@@ -12,10 +12,6 @@ function requireAuth(req, res, next) {
 }
 var router = express_1.Router();
 exports.router = router;
-router.get('/logout', function (req, res) {
-    req.session = undefined;
-    res.redirect('/');
-});
 router.get('/protected', requireAuth, function (req, res) {
     res.send("Welcome to the protected route");
 });
